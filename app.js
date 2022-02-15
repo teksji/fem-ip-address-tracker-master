@@ -6,26 +6,18 @@ let isSecond = false;
 let _map = {}; 
 let ip = ""
 let api_key = "at_C4IWkaKCFPZ1gBtx08KeHFgG7sDyO";
-var x = document.getElementById("x");
+
 
 window.addEventListener("DOMContentLoaded", function(){
     loading.classList.remove("hide-ripple");
-    getLocation();
+    findIP();
 });
 
 button.addEventListener("click", function(){
     loading.classList.remove("hide-ripple");
     ip = textField.value;
-    getLocation();
+    findIP();
 });
-
-function getLocation() {
-    if (navigator.geolocation) {
-	   findIP();
-    } else { 
-	   x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
 
 
 function findIP(){
