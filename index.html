@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="stylesheet" type="text/css" href="style.css"  >
+        <title>Frontend Mentor | IP Address Tracker</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <div class="heading">
+            <div>
+                <h1>IP Address Tracker</h1>
+                <input type="text" class="textField" autocomplete="off" placeholder="Insert an IP Address" />
+                <button type="button" class="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+                        <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="statsBox">
+            <p id="x"></p>
+            <div class="cell">
+                <h3>IP ADDRESS</h3>
+                <p id="IPAddress">------------------</p>
+            </div>
+            <div class="cell">
+                <h3>LOCATION</h3>
+                <p id="location">------------------</p>
+            </div>
+            <div class="cell">
+                <h3>TIMEZONE</h3>
+                <p id="timeZone">------------------</p>
+            </div>
+            <div class="cell">
+                <h3>ISP</h3>
+                <p id="isp">------------------</p>
+            </div>
+        </div>
+        <div id="mapid">
+            <div class="lds-ripple hide-ripple">
+                <div></div>
+                <div></div>
+            </div>
+            <!--<div class="preloader hide-preloader">*/
+                <img src="https://user-images.githubusercontent.com/75173681/109682276-8f95ff80-7b7e-11eb-813b-4f7d80cb820a.gif" alt="preloader" class="preloader__item" />
+            </div>-->
+        </div>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="https://teksji.github.io/css-mypersonalsite/">Teksji</a>.
+        </div>
+    </body>
+    <script src="app.js"></script>
+</html>

@@ -1,0 +1,189 @@
+:root {
+    --very-dark-gray: hsl(0, 0%, 17%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #373B44;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #4286f4, #373B44);
+    background: linear-gradient(to left, #4286f4, #453E99);
+
+}
+.heading {
+    width: 100%;
+    height: 30%;
+    background: url(images/pattern-bg.png);
+    background-size: cover;
+    text-align: center;
+}
+h1 {
+    color: white;
+    padding: 18px;
+    font-family: 'Rubik';
+    font-weight: 400;
+    
+}
+button {
+    width: 50px;
+    height: 6.1vh;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-left: -5px;
+    background-color: var(--very-dark-gray);
+    outline: none;
+    cursor: pointer; 
+}
+.textField{
+    width:465px;
+    height: 6vh;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    margin-right: 0px;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+.lds-ripple {
+  display: block;
+  position: relative;
+  margin: 250px auto;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fcf;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+.hide-ripple {
+    z-index: -999;
+    visibility: hidden;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+#mapid{
+    width: 99%;
+    height: 69%;
+    margin: auto;
+    z-index: 0;
+}
+
+.statsBox {
+    width: 80%;
+    height: 20vh;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    z-index: 2;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+h3 {
+    color: gray;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.cell {
+    border-right-style: solid;
+    border-color: rgb(233, 237, 238);
+    width: 25%;
+    height: 50%;
+    color:hsl(0, 0%, 17%);
+    margin-left: 20px;
+}
+.cell:nth-child(4) {
+    border: none;
+}
+
+.statsBox p{
+    font-size: 1.6rem;
+}
+
+.attribution {
+    height: 0px;
+    font-size: 0.4rem;
+    text-align: end;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+@media (max-width: 768px) {
+    .statsBox{
+        width: 100%;
+        height: auto;
+        left: 0px;
+        display: flex;
+        margin: 0px;
+    }
+    .button {
+        height: 6vh;
+    }
+    .cell {
+        width: 90%;
+        border-right: none;
+        margin: 10px;
+    }
+    .statsBox p{
+        font-size: 1rem;
+    }
+    .textField{
+        width: 70%;
+    }
+    .preloader{
+        position: absolute;
+        bottom: 10px;
+    }
+}
+
+@media (max-height: 600px) {
+    h1{
+        padding: 0px;
+    }
+    .statsBox {
+        height: 100px;
+      
+    }
+    .statsBox p{
+        font-size: 0.8rem;
+    }
+    .preloader{
+        position: absolute;
+        bottom: 0px;
+    }
+}
